@@ -1,0 +1,29 @@
+relationship AutoDetected_5acaeb8d-d7d4-4e5b-a356-eb15da1d682a
+	fromColumn: Opportunity.StageName
+	toColumn: OpportunityHistoryGroup.StageName
+
+relationship AutoDetected_6eb6ec08-50e3-48c9-86c7-2c65410bcaa8
+	fromColumn: Contact.AccountId
+	toColumn: Account.Id
+
+relationship AutoDetected_04fab8fc-3eaa-4be5-8a83-9e9ffec2eb6c
+	fromColumn: Opportunity.AccountId
+	toColumn: Account.Id
+
+relationship AutoDetected_7432a253-f46e-41da-9956-366328691f01
+	fromColumn: OpportunityHistory.OpportunityId
+	toColumn: Opportunity.Id
+
+relationship 6c7b8b0f-7763-f043-5d68-4859f8cd6c6b
+	fromColumn: Lead.ConvertedAccountId
+	toColumn: Account.Id
+
+relationship 16795e36-dfc1-d905-6a67-982641589d47
+	isActive: false
+	fromColumn: Opportunity.'Opp Close Date_Simulated'
+	toColumn: Calendar.Date
+
+relationship ac884e94-8d78-6b9c-6b2e-321b5f2b03ac
+	fromColumn: Opportunity.'Opp Creation Date_Simulated'
+	toColumn: Calendar.Date
+

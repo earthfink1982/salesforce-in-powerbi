@@ -1,0 +1,43 @@
+table OpportunityHistoryGroup
+	lineageTag: b174121b-e863-48c8-9013-add6eea915b2
+
+	column StageName
+		dataType: string
+		lineageTag: c89605b3-3fc1-4a3e-bf30-54ede492cb2a
+		summarizeBy: none
+		sourceColumn: StageName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Count
+		dataType: int64
+		formatString: 0
+		lineageTag: ccc4d1a9-4e13-433c-8c7d-8e12a4d8c22d
+		summarizeBy: none
+		sourceColumn: Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'StageName (groups)'
+		dataType: string
+		lineageTag: 40ade8fc-927f-45e8-9d09-35dcf2e86acf
+		summarizeBy: none
+		sourceColumn: StageName (groups)
+
+		annotation SummarizationSetBy = Automatic
+
+	partition OpportunityHistoryGroup = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/earthfink1982/salesforce-in-powerbi/refs/heads/main/data/OpportunityHistoryGroup.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"StageName", type text}, {"Count", Int64.Type}, {"StageName (groups)", type text}}),
+				    #"Sorted Rows" = Table.Sort(#"Changed Type",{{"StageName (groups)", Order.Ascending}})
+				in
+				    #"Sorted Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

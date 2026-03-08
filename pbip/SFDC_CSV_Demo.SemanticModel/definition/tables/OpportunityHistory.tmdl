@@ -1,0 +1,130 @@
+table OpportunityHistory
+	lineageTag: c39ddaff-1255-4a97-b98b-5534b6378ee6
+
+	column Id
+		dataType: string
+		lineageTag: 92be2c33-feaa-4bd9-90ee-4d001b85b887
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column OpportunityId
+		dataType: string
+		lineageTag: dfc10c48-ed4f-4284-a0df-5a107e8982dd
+		summarizeBy: none
+		sourceColumn: OpportunityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedById
+		dataType: string
+		lineageTag: 33bcb833-7f71-4629-9912-122a3eb76d87
+		summarizeBy: none
+		sourceColumn: CreatedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6bd0ff22-c19b-4c31-8f5a-a0edf8060429
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column StageName
+		dataType: string
+		lineageTag: 1d1f5773-f11b-445b-98af-dd40f53f0345
+		summarizeBy: none
+		sourceColumn: StageName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c590d6a-49c3-45c7-a249-cd3330a5f581
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExpectedRevenue
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d9c3cc5-5cee-43f3-8b86-be324183259c
+		summarizeBy: sum
+		sourceColumn: ExpectedRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column CloseDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 47598953-d356-4091-bba5-60c107274562
+		summarizeBy: none
+		sourceColumn: CloseDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Probability
+		dataType: int64
+		formatString: 0
+		lineageTag: be6cb552-e58f-48d7-9f38-78fef4fafbe3
+		summarizeBy: sum
+		sourceColumn: Probability
+
+		annotation SummarizationSetBy = Automatic
+
+	column ForecastCategory
+		dataType: string
+		lineageTag: 9401b37f-df1f-4670-9237-6bf3a890ef52
+		summarizeBy: none
+		sourceColumn: ForecastCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column SystemModstamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 178e6bf8-f9b7-4cd8-b5a6-2a2649a45e35
+		summarizeBy: none
+		sourceColumn: SystemModstamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDeleted
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a6921043-fe46-4ac7-a53d-36dbb5d5a965
+		summarizeBy: none
+		sourceColumn: IsDeleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column OpportunityHistoryKey
+		dataType: string
+		lineageTag: 1dad3e6c-7734-4a15-8c8d-1d4dc68543a8
+		summarizeBy: none
+		sourceColumn: OpportunityHistoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition OpportunityHistory = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/earthfink1982/salesforce-in-powerbi/refs/heads/main/data/OpportunityHistory.csv"),[Delimiter=",", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Id", type text}, {"OpportunityId", type text}, {"CreatedById", type text}, {"CreatedDate", type datetime}, {"StageName", type text}, {"Amount", Int64.Type}, {"ExpectedRevenue", Int64.Type}, {"CloseDate", type date}, {"Probability", Int64.Type}, {"ForecastCategory", type text}, {"SystemModstamp", type datetime}, {"IsDeleted", type logical}, {"OpportunityHistoryKey", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

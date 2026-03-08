@@ -1,0 +1,119 @@
+createOrReplace
+
+	table Calendar
+		lineageTag: 42bd1b21-2b11-42b3-bb96-ca23499e123f
+		dataCategory: Time
+
+		column Date
+			dataType: dateTime
+			isKey
+			formatString: Short Date
+			lineageTag: d09d443c-4c0e-4d0a-bd23-319a27c92ac8
+			summarizeBy: none
+			sourceColumn: Date
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation UnderlyingDateTimeDataType = Date
+
+		column Year
+			dataType: int64
+			formatString: 0
+			lineageTag: d4968656-87fb-4d60-b524-cd0c2d56de61
+			summarizeBy: sum
+			sourceColumn: Year
+
+			annotation SummarizationSetBy = Automatic
+
+		column Quarter
+			dataType: string
+			lineageTag: 7526aa0c-c9d8-4f45-8a28-397c2eb32acc
+			summarizeBy: none
+			sourceColumn: Quarter
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Month Number'
+			dataType: int64
+			formatString: 0
+			lineageTag: 2514cb4b-ad34-42af-a2f2-40f990499174
+			summarizeBy: sum
+			sourceColumn: Month Number
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Month Name'
+			dataType: string
+			lineageTag: 6132fa54-ca22-4ecd-a358-a65816707ca3
+			summarizeBy: none
+			sourceColumn: Month Number
+			sortByColumn: 'Month Number'
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Week of Year'
+			dataType: int64
+			formatString: 0
+			lineageTag: ceb123d9-61bd-4dad-9e69-337dea1d1273
+			summarizeBy: sum
+			sourceColumn: Week of Year
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'ISO Week Start'
+			dataType: dateTime
+			formatString: Long Date
+			lineageTag: 68a4bd07-b7a0-416d-be10-2b17e315e8d2
+			summarizeBy: none
+			sourceColumn: ISO Week Start
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation UnderlyingDateTimeDataType = Date
+
+		column 'Day Name'
+			dataType: string
+			lineageTag: dfa94483-7e12-4c27-ba3e-66b2101da9a8
+			summarizeBy: none
+			sourceColumn: Day Name
+			sortByColumn: 'Day of Week Number'
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Day of Week Number'
+			dataType: int64
+			formatString: 0
+			lineageTag: d6e79e77-69d3-42d8-a373-dc29f5c0a181
+			summarizeBy: sum
+			sourceColumn: Day of Week Number
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Year Month'
+			dataType: string
+			lineageTag: 8bb90e3c-4c18-4a47-8cea-92502be0acc7
+			summarizeBy: none
+			sourceColumn: Year Month
+
+			annotation SummarizationSetBy = Automatic
+
+		partition Calendar = m
+			mode: import
+			source = ```
+					let
+					    // 1. Fetch the raw binary from GitHub
+					    RawData = Web.Contents("https://raw.githubusercontent.com/earthfink1982/power-platform-script-library/refs/heads/main/powerquery-m/CalendarTable.m"),
+					    
+					    // 2. Convert the binary to a single continuous text string
+					    ScriptText = Text.FromBinary(RawData),
+					    
+					    // 3. Evaluate the text string as M code
+					    EvaluatedScript = Expression.Evaluate(ScriptText, #shared)
+					in
+					    EvaluatedScript
+					```
+
+		annotation PBI_NavigationStepName = Navigation
+
+		annotation PBI_ResultType = Table
+

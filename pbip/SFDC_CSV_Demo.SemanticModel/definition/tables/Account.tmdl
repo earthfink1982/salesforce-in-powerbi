@@ -1,0 +1,160 @@
+table Account
+	lineageTag: feebb5ed-4b3b-4507-a3e6-f139e3f1ed62
+
+	column Id
+		dataType: string
+		lineageTag: d9b3ae5d-0102-4b62-987f-155480fe075f
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDeleted
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3bcb1674-1c98-4b52-af02-3d3ca6aacc67
+		summarizeBy: none
+		sourceColumn: IsDeleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 2b2d6973-e72b-4982-aaf4-1df7b2e85437
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: 7413ea5d-6275-4249-ae8a-c90689a15255
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentId
+		dataType: string
+		lineageTag: 2ed69195-5283-4db7-bfc0-f450ed6d3d25
+		summarizeBy: none
+		sourceColumn: ParentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillingCity
+		dataType: string
+		lineageTag: 5af14763-023e-48e5-8e13-8768e3f30a71
+		summarizeBy: none
+		sourceColumn: BillingCity
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillingState
+		dataType: string
+		lineageTag: bb91c86b-f08a-493a-9c39-005591e6d9f3
+		summarizeBy: none
+		sourceColumn: BillingState
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillingPostalCode
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e85bd75-cf83-4281-b151-8a6700690e6e
+		summarizeBy: count
+		sourceColumn: BillingPostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillingLatitude
+		dataType: string
+		lineageTag: 486fdfff-466c-4ab6-a030-ec5593c0f9c6
+		summarizeBy: none
+		sourceColumn: BillingLatitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillingLongitude
+		dataType: string
+		lineageTag: 0ca552cd-3c8f-453b-9914-814a89245b85
+		summarizeBy: none
+		sourceColumn: BillingLongitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column Industry
+		dataType: string
+		lineageTag: 4b9b57e7-3bc3-45e0-bd89-333663080119
+		summarizeBy: none
+		sourceColumn: Industry
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnnualRevenue
+		dataType: int64
+		formatString: 0
+		lineageTag: abe75b10-4f98-4587-9e84-c856a754ad6e
+		summarizeBy: sum
+		sourceColumn: AnnualRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfEmployees
+		dataType: int64
+		formatString: 0
+		lineageTag: c46912ad-2427-4c1d-b5ef-10100279d046
+		summarizeBy: sum
+		sourceColumn: NumberOfEmployees
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ownership
+		dataType: string
+		lineageTag: 9433210f-f214-48e8-bcc5-d41214c3d437
+		summarizeBy: none
+		sourceColumn: Ownership
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rating
+		dataType: string
+		lineageTag: fdad1cac-8edc-4eae-bf3d-0dd07aca095f
+		summarizeBy: none
+		sourceColumn: Rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastActivityDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 986aa406-1b50-4ba2-9172-407d9d853b2f
+		summarizeBy: none
+		sourceColumn: LastActivityDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Active__c
+		dataType: string
+		lineageTag: 8ac477ac-7c75-4838-b05e-2f63368cbb58
+		summarizeBy: none
+		sourceColumn: Active__c
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Account = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/earthfink1982/salesforce-in-powerbi/refs/heads/main/data/Account.csv"),[Delimiter=",", Columns=17, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Id", type text}, {"IsDeleted", type logical}, {"Name", type text}, {"Type", type text}, {"ParentId", type text}, {"BillingCity", type text}, {"BillingState", type text}, {"BillingPostalCode", Int64.Type}, {"BillingLatitude", type text}, {"BillingLongitude", type text}, {"Industry", type text}, {"AnnualRevenue", Int64.Type}, {"NumberOfEmployees", Int64.Type}, {"Ownership", type text}, {"Rating", type text}, {"LastActivityDate", type date}, {"Active__c", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

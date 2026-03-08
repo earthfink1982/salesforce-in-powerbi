@@ -1,0 +1,253 @@
+table Lead
+	lineageTag: b21648bb-3c84-4739-9cfe-6d463d645983
+
+	column Id
+		dataType: string
+		lineageTag: c39fd781-3b7b-4973-9cc8-5c5b9a11923e
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDeleted
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a1ad6131-ba74-4522-a8a3-087a7ba20031
+		summarizeBy: none
+		sourceColumn: IsDeleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		lineageTag: f953c782-ebc2-4899-90a7-8eeee7b6bad8
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		lineageTag: cc814a16-7b5e-43d0-a9b8-61daa5609c6a
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salutation
+		dataType: string
+		lineageTag: 89371718-48b7-49ae-b86e-0a0dd583aa58
+		summarizeBy: none
+		sourceColumn: Salutation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: c9713a3d-1612-47b1-8857-f3e6f7572129
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: bc199124-7fb5-422a-be11-9252d49ffaa7
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Company
+		dataType: string
+		lineageTag: 745a9ab6-4a94-4705-a7d9-1689dabac424
+		summarizeBy: none
+		sourceColumn: Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		lineageTag: 7e3c0863-21b3-4c71-a09a-7cce63a783e0
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column MobilePhone
+		dataType: string
+		lineageTag: c3346c8a-36bb-48f8-87bc-0a7d55b3e3aa
+		summarizeBy: none
+		sourceColumn: MobilePhone
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: 3409fa30-ba99-40da-87a5-33a9d961ad98
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Website
+		dataType: string
+		lineageTag: b2dd7e6c-6213-48a9-ad12-d8e960d50783
+		summarizeBy: none
+		sourceColumn: Website
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeadSource
+		dataType: string
+		lineageTag: 20c776a8-f033-4332-9fd0-42784b040941
+		summarizeBy: none
+		sourceColumn: LeadSource
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 9453dee8-0449-4d26-ad53-efcdbd8908f8
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Industry
+		dataType: string
+		lineageTag: 6c4c2880-86cc-44cc-89a3-ffc88925bda7
+		summarizeBy: none
+		sourceColumn: Industry
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnnualRevenue
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c7bda4d-e981-433a-b3b3-10c3de55caee
+		summarizeBy: sum
+		sourceColumn: AnnualRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberOfEmployees
+		dataType: int64
+		formatString: 0
+		lineageTag: dd9dd4be-b293-4398-a03e-9c126e495119
+		summarizeBy: sum
+		sourceColumn: NumberOfEmployees
+
+		annotation SummarizationSetBy = Automatic
+
+	column OwnerId
+		dataType: string
+		lineageTag: d370350c-5dd8-4bc6-83b0-532680d8206f
+		summarizeBy: none
+		sourceColumn: OwnerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsConverted
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4ca0ea65-a23e-4a87-8a4f-41a2cbb12439
+		summarizeBy: none
+		sourceColumn: IsConverted
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConvertedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2aa30e64-5f56-4f94-8149-b78eaf461a18
+		summarizeBy: none
+		sourceColumn: ConvertedDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ConvertedAccountId
+		dataType: string
+		lineageTag: 913e1107-338d-4b0e-9b52-57ccc16b35a5
+		summarizeBy: none
+		sourceColumn: ConvertedAccountId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConvertedContactId
+		dataType: string
+		lineageTag: 150a53cb-d6c9-4b30-8297-aaa48fdf6a0f
+		summarizeBy: none
+		sourceColumn: ConvertedContactId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ConvertedOpportunityId
+		dataType: string
+		lineageTag: fa7577dc-a03a-40b6-933a-b6c4ff16b4d2
+		summarizeBy: none
+		sourceColumn: ConvertedOpportunityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bb795966-b53b-4b3d-99ed-fe75fab4d820
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastActivityDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f4c62a42-ede4-4d64-80a1-1e1553c3cf7d
+		summarizeBy: none
+		sourceColumn: LastActivityDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EmailBouncedReason
+		dataType: string
+		lineageTag: b2b79fda-926c-486d-8768-0c5b6edd0854
+		summarizeBy: none
+		sourceColumn: EmailBouncedReason
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailBouncedDate
+		dataType: string
+		lineageTag: 34171faf-8b6e-43ec-b791-db5cc4b93824
+		summarizeBy: none
+		sourceColumn: EmailBouncedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberofLocations__c
+		dataType: int64
+		formatString: 0
+		lineageTag: e815aafd-56f3-4fb9-8031-fffcea83e8e1
+		summarizeBy: sum
+		sourceColumn: NumberofLocations__c
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Lead = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/earthfink1982/salesforce-in-powerbi/refs/heads/main/data/Lead.csv"),[Delimiter=",", Columns=28, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Id", type text}, {"IsDeleted", type logical}, {"LastName", type text}, {"FirstName", type text}, {"Salutation", type text}, {"Name", type text}, {"Title", type text}, {"Company", type text}, {"Phone", type text}, {"MobilePhone", type text}, {"Email", type text}, {"Website", type text}, {"LeadSource", type text}, {"Status", type text}, {"Industry", type text}, {"AnnualRevenue", Int64.Type}, {"NumberOfEmployees", Int64.Type}, {"OwnerId", type text}, {"IsConverted", type logical}, {"ConvertedDate", type date}, {"ConvertedAccountId", type text}, {"ConvertedContactId", type text}, {"ConvertedOpportunityId", type text}, {"LastModifiedDate", type datetime}, {"LastActivityDate", type date}, {"EmailBouncedReason", type text}, {"EmailBouncedDate", type text}, {"NumberofLocations__c", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
