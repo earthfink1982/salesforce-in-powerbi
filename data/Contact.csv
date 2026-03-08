@@ -1,0 +1,26 @@
+Id,IsDeleted,AccountId,LastName,FirstName,Phone,MobilePhone,AssistantPhone,Email,Title,Department,LeadSource,LastActivityDate,EmailBouncedReason,EmailBouncedDate,IsEmailBounced,Name
+003bm00000zapthAAA,FALSE,001bm00001ZL8U9AAL,Gonzalez,Rose,(512) 757-6000,(512) 757-9340,,rose@edge.com,"SVP, Procurement",Procurement,Trade Show,,,,FALSE,Rose Gonzalez
+003bm00000zaptiAAA,FALSE,001bm00001ZL8U9AAL,Forbes,Sean,(512) 757-6000,(512) 757-4561,,sean@edge.com,CFO,Finance,Trade Show,,,,FALSE,Sean Forbes
+003bm00000zaptjAAA,FALSE,001bm00001ZL8UAAA1,Rogers,Jack,(336) 222-7000,,,jrogers@burlington.com,"VP, Facilities",,Web,,,,FALSE,Jack Rogers
+003bm00000zaptkAAA,FALSE,001bm00001ZL8UBAA1,Stumuller,Pat,(014) 427-4427,(014) 454-6364,(014) 427-4465,pat@pyramid.net,"SVP, Administration and Finance",Finance,,,,,FALSE,Pat Stumuller
+003bm00000zaptlAAA,FALSE,001bm00001ZL8UCAA1,Young,Andy,(785) 241-6200,(785) 265-5350,,a_young@dickenson.com,"SVP, Operations",Internal Operations,Purchased List,,,,FALSE,Andy Young
+003bm00000zaptmAAA,FALSE,001bm00001ZL8UDAA1,Barr,Tim,(312) 596-1000,(312) 596-1230,,barr_tim@grandhotels.com,"SVP, Administration and Finance",Finance,External Referral,,,,FALSE,Tim Barr
+003bm00000zaptnAAA,FALSE,001bm00001ZL8UDAA1,Bond,John,(312) 596-1000,(312) 596-1563,,bond_john@grandhotels.com,"VP, Facilities",Facilities,External Referral,,,,FALSE,John Bond
+003bm00000zaptoAAA,FALSE,001bm00001ZL8UEAA1,Pavlova,Stella,(212) 842-5500,(212) 842-5501,(212) 842-5589,spavlova@uog.com,"SVP, Production",Production,Public Relations,,,,FALSE,Stella Pavlova
+003bm00000zaptpAAA,FALSE,001bm00001ZL8UEAA1,Boyle,Lauren,(212) 842-5500,(212) 842-5611,,lboyle@uog.com,"SVP, Technology",Technology,Public Relations,,,,FALSE,Lauren Boyle
+003bm00000zaptqAAA,FALSE,001bm00001ZL8UFAA1,Levy,Babara,(503) 421-7800,(503) 421-5451,(503) 421-6782,b.levy@expressl&t.net,"SVP, Operations",Operations,Word of mouth,,,,FALSE,Babara Levy
+003bm00000zaptrAAA,FALSE,001bm00001ZL8UFAA1,Davis,Josh,(503) 421-7800,(503) 421-4387,,j.davis@expressl&t.net,"Director, Warehouse Mgmt",Warehouse Mgmt,Word of mouth,,,,FALSE,Josh Davis
+003bm00000zaptsAAA,FALSE,001bm00001ZL8UGAA1,Grey,Jane,(520) 773-9050,(520) 773-4539,,jane_gray@uoa.edu,Dean of Administration,Administration,Word of mouth,,,,FALSE,Jane Grey
+003bm00000zapttAAA,FALSE,001bm00001ZL8UEAA1,Song,Arthur,(212) 842-5500,(212) 842-4535,(212) 842-5464,asong@uog.com,CEO,Executive Team,Public Relations,,,,FALSE,Arthur Song
+003bm00000zaptuAAA,FALSE,001bm00001ZL8UHAA1,James,Ashley,+44 191 4956203,+44 191 3456234,,ajames@uog.com,"VP, Finance",Finance,Public Relations,,,,FALSE,Ashley James
+003bm00000zaptvAAA,FALSE,001bm00001ZL8UIAA1,Ripley,Tom,(650) 450-8810,(650) 345-7636,,tripley@uog.com,Regional General Manager,Executive Team,Public Relations,,,,FALSE,Tom Ripley
+003bm00000zaptwAAA,FALSE,001bm00001ZL8UIAA1,D'Cruz,Liz,(650) 450-8810,(650) 345-6637,,ldcruz@uog.com,"VP, Production",Production,Public Relations,,,,FALSE,Liz D'Cruz
+003bm00000zaptxAAA,FALSE,001bm00001ZL8UJAA1,Frank,Edna,(650) 867-3450,(650) 867-7686,,efrank@genepoint.com,"VP, Technology",Technology,Partner,,,,FALSE,Edna Frank
+003bm00000zaptyAAA,FALSE,001bm00001ZL8UEAA1,Green,Avi,(212) 842-5500,(212) 842-2383,(212) 842-5428,agreen@uog.com,CFO,Finance,Public Relations,,,,FALSE,Avi Green
+003bm00000zaptzAAA,FALSE,001bm00001ZL8UKAA1,Nedaerk,Siddartha,,,,,,,,,,,FALSE,Siddartha Nedaerk
+003bm00000zapu0AAA,FALSE,001bm00001ZL8UKAA1,Llorrac,Jake,,,,,,,,,,,FALSE,Jake Llorrac
+003bm00000zbyRuAAI,FALSE,001bm00001ZM1LyAAL,Boxer,Bertha,(850) 644-4200,,,bertha@fcof.net,Director of Vendor Relations,,Web,02/23/26,,,FALSE,Bertha Boxer
+003bm00000zc4DzAAI,FALSE,001bm00001ZMQX5AAP,Dadio Jr,Bill,(614) 431-5000,,,bill_dadio@zenith.com,CFO,,Web,,,,FALSE,Bill Dadio Jr
+003bm00000zc6qsAAA,FALSE,001bm00001ZMTUyAAP,Mcclure,Brenda,(847) 262-5000,,,brenda@cardinal.net,CFO,,Web,,,,FALSE,Brenda Mcclure
+003bm00000zc9GrAAI,FALSE,001bm00001ZMZGzAAP,Glimpse,Jeff,886-2-25474189,,,jeffg@jackson.com,"SVP, Procurement",,Phone Inquiry,02/23/26,,,FALSE,Jeff Glimpse
+003bm00000zc9gfAAA,FALSE,001bm00001ZMa9pAAD,Bair,Betty,(610) 265-9100,,,bblair@abankingco.com,"VP, Administration",,Purchased List,,,,FALSE,Betty Bair

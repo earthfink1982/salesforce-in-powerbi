@@ -1,0 +1,19 @@
+Id,IsDeleted,Name,Type,ParentId,BillingCity,BillingState,BillingPostalCode,BillingLatitude,BillingLongitude,Industry,AnnualRevenue,NumberOfEmployees,Ownership,Rating,LastActivityDate,Active__c
+001bm00001ZL8U9AAL,FALSE,Edge Communications,Customer - Direct,,Austin,TX,,,,Electronics,139000000,1000,Public,Hot,,Yes
+001bm00001ZL8UAAA1,FALSE,Burlington Textiles Corp of America,Customer - Direct,,Burlington,NC,27215,,,Apparel,350000000,9000,Public,Warm,,
+001bm00001ZL8UBAA1,FALSE,Pyramid Construction Inc.,Customer - Channel,,Paris,,75251,,,Construction,950000000,2680,Public,,,Yes
+001bm00001ZL8UCAA1,FALSE,Dickenson plc,Customer - Channel,,Lawrence,KS,66045,,,Consulting,50000000,120,Private,,,Yes
+001bm00001ZL8UDAA1,FALSE,Grand Hotels & Resorts Ltd,Customer - Direct,,Chicago,IL,,,,Hospitality,500000000,5600,Public,Warm,,Yes
+001bm00001ZL8UEAA1,FALSE,United Oil & Gas Corp.,Customer - Direct,,New York,NY,,,,Energy,5600000000,145000,Public,Hot,,Yes
+001bm00001ZL8UFAA1,FALSE,Express Logistics and Transport,Customer - Channel,,Portland,OR,,,,Transportation,950000000,12300,Public,Cold,,Yes
+001bm00001ZL8UGAA1,FALSE,University of Arizona,Customer - Direct,,Tucson,AZ,,,,Education,,39000,Other,Warm,,Yes
+001bm00001ZL8UHAA1,FALSE,"United Oil & Gas, UK",Customer - Direct,,,UK,,,,Energy,,24000,Public,,,Yes
+001bm00001ZL8UIAA1,FALSE,"United Oil & Gas, Singapore",Customer - Direct,,Singapore,Singapore,,,,Energy,,3000,Public,,,Yes
+001bm00001ZL8UJAA1,FALSE,GenePoint,Customer - Channel,,Mountain View,CA,,,,Biotechnology,30000000,265,Private,Cold,,Yes
+001bm00001ZL8UKAA1,FALSE,sForce,,,San Francisco,CA,94087,,,,,,,,,
+001bm00001ZL8ULAA1,FALSE,Sample Account for Entitlements,,,,,,,,,,,,,,
+001bm00001ZM1LyAAL,FALSE,Farmers Coop. of Florida,,,Tallahassee,FL,32306,,,Agriculture,900750000,,,Hot,02/23/26,
+001bm00001ZMQX5AAP,FALSE,Zenith Industrial Partners,,,,OH,,,,,,,,,,
+001bm00001ZMTUyAAP,FALSE,Cadinal Inc.,,,,IL,,,,,,,,,,
+001bm00001ZMZGzAAP,FALSE,Jackson Controls,,,,,,,,,,,,,02/23/26,
+001bm00001ZMa9pAAD,FALSE,American Banking Corp.,,,,PA,,,,,,,,,,
