@@ -1,2 +1,25 @@
+# --- Power BI Project (.pbip) specific ---
+# Ignore the local user settings and cache
 **/.pbi/localSettings.json
 **/.pbi/cache.abf
+.pbiproject/localSettings.json
+*.Dataset/item.config.json
+*.Dataset/item.metadata.json
+*.Report/item.config.json
+
+# --- General Power BI Temp/Lock Files ---
+*.pbi
+*.fbk
+*.cache
+*.ms-adms
+__MACOSX/
+
+# --- Large Binary Files ---
+# Consider keeping these commented out unless your repo gets too large
+# *.pbix
+# *.pbit
+
+# --- OS generated files ---
+.DS_Store
+Thumbs.db
+## Testing
