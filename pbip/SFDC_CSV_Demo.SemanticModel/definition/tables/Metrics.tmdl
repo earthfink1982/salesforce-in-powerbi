@@ -32,7 +32,7 @@ table Metrics
 		mode: import
 		source =
 				let
-				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45Wci5KTSxJTVHSUXJJLU4uyiwoySxLBfIMlWJ1opXC8/MwZIzBMs45+cVYtBlBtGXmKQQBjQVJZyam5+UXl2QmAzlgSceydAWfzLTU5MrkHCwqYgE=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Metric = _t, Type = _t, Order = _t]),
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45Wci5KTSxJTVHSUXJJLU4uyiwoySxLBfIMlWJ1opXC8/MwZIzBMs45+cVYtBlBtGXmKQQBjQVJZyam5+UXl2QmAzlgSceydAWfzLTU5MrkHOwqglLLUvNKUxWw2W6iFBsLAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Metric = _t, Type = _t, Order = _t]),
 				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Metric", type text}, {"Type", type text}})
 				in
 				    #"Changed Type"

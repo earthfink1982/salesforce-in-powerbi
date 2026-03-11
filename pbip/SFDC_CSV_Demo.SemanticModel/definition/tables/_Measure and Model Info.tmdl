@@ -18,14 +18,14 @@ table '_Measure and Model Info'
 
 	measure 'Opportunities Won' = ```
 			
-			VAR og = 
+			VAR og =
 			CALCULATE( 
 			    [Opportunities Created], 
 			        Opportunity[IsClosed] = TRUE, 
 			        Opportunity[IsWon] = TRUE, 
 			        USERELATIONSHIP('Calendar'[Date], Opportunity[Opp Close Date_Simulated])
 			    )
-			
+			// Staged a column further upstream to simplify the logic 
 			VAR new = 
 			CALCULATE( 
 			    [Opportunities Created], 
@@ -50,6 +50,7 @@ table '_Measure and Model Info'
 			metric = "Created", [Opportunities Created], 
 			metric = "Closed", [Opportunities Closed],
 			metric = "Won", [Opportunities Won],
+			-- metric = "Revenue Won", [Revenue Won],
 			BLANK()
 			)
 			```
@@ -64,6 +65,19 @@ table '_Measure and Model Info'
 	measure 'Opportunities Lost' = [Opportunities Closed] - [Opportunities Won]
 		formatString: 0
 		lineageTag: 13a09574-1ff1-4bff-898b-93cbb82c78ae
+
+	measure 'Revenue Won' = ```
+			
+			CALCULATE( 
+			    SUM(Opportunity[Amount]), 
+			    Opportunity[Opp Win Numeric] = 1, 
+			    USERELATIONSHIP(Opportunity[Opp Close Date_Simulated], 'Calendar'[Date])
+			    )
+			
+			
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: b1169232-f9b7-46b6-ae54-851e37caea26
 
 	column Name
 		displayFolder: _information columns
